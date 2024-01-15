@@ -1,31 +1,31 @@
-.FilterHeader {
+.HeroesFilterHeader {
     display: grid;
     justify-content: center;
-    margin-top: 50px;
-    padding: 0 100px;
+    margin-top: 3.125rem;
+    padding: 0 6.25rem;
 }
 
-.FilterHeader__title {
+.HeroesFilterHeaderTitle {
     color: #fff;
     font-size: 3vw;
     font-family: "Reaver-Bold", serif;
     font-weight: bold;
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 10px;
+    margin-top: 6.25rem;
+    margin-bottom: 0.625rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 0.1875rem;
     line-height: 112%;
 }
 
-.FilterHeader__info {
+.HeroesFilterHeaderInfo {
     width: 100%;
-    max-width: 1000px;
-    margin: 0px auto;
+    max-width: 62.5rem;
+    margin: 0rem auto;
     color: #ddd;
     font-family: "Radiance", serif;
-    font-size: 26px;
+    font-size: 1.625rem;
     text-align: center;
     font-weight: 100;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }

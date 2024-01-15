@@ -20,7 +20,6 @@
 
 html,
 body {
-  max-width: 100vw;
   overflow-x: hidden;
   color: #fff;
 }
@@ -39,9 +38,9 @@ a {
 }
 
 .btn {
-  width: 44px;
-  height: 34px;
-  margin-left: -4px;
+  width: 2.75rem;
+  height: 2.125rem;
+  margin-left: -0.25rem;
   background-size: cover;
   background-repeat: no-repeat;
   transition-property: filter;
