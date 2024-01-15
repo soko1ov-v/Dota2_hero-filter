@@ -55,14 +55,14 @@ export function SearchBar({
 }: SearchBarProps) {
   return (
     <div className={styles.SearchBar}>
-      <h3 className={styles.SearchBar__title}>FILTER HEROES</h3>
-      <div className={styles.attrFilterContainer}>
-        <h3 className={styles.filterTitle}>ATTRIBUTE</h3>
+      <h3 className={styles.SearchBarTitle}>FILTER HEROES</h3>
+      <div className={styles.AttrFilterContainer}>
+        <h3 className={styles.FilterTitle}>ATTRIBUTE</h3>
         {Object.keys(attributes).map((attr) => {
           return (
             <Button
               key={attr}
-              className={`attrBtn btn ${
+              className={`AttrBtn btn ${
                 attrActive === attributes[attr].value ? "btn--active" : ""
               }`}
               text={attributes[attr].text}
@@ -73,13 +73,13 @@ export function SearchBar({
         })}
       </div>
 
-      <div className={styles.complFilterContainer}>
-        <h3 className={styles.filterTitle}>COMPLEXITY</h3>
+      <div className={styles.ComplFilterContainer}>
+        <h3 className={styles.FilterTitle}>COMPLEXITY</h3>
         {Object.keys(complexityMap).map((comp) => {
           return (
             <Button
               key={comp}
-              className={`complBtn btn ${
+              className={`ComplBtn btn ${
                 complexity >= complexityMap[comp].value ? "btn--active" : ""
               }`}
               onClick={() => onComplClick(complexityMap[comp].value)}
@@ -91,12 +91,12 @@ export function SearchBar({
         })}
       </div>
 
-      <div className={styles.heroSearchContainer}>
+      <div className={styles.HeroSearchContainer}>
         <SearchIcon />
         <form>
           <Input
             onChange={onChange}
-            className={styles.heroSearchInput}
+            className={styles.HeroSearchInput}
             value={query}
           />
         </form>

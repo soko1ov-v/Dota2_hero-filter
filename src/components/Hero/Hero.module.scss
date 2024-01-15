@@ -1,9 +1,9 @@
-.heroItemContainer {
+.HeroItemContainer {
     justify-self: start;
-    width: 225px;
-    height: 127px;
+    width: 14.0625rem;
+    height: 7.9375rem;
     position: relative;
-    box-shadow: 1px 1px 4px #000;
+    box-shadow: 0.0625rem 0.0625rem 0.25rem #000;
     transform-origin: center;
     transform: scale(1);
     transition: transform 0.35s ease-in-out, width 0.35s ease-in-out;
@@ -15,28 +15,7 @@
         z-index: 1;
     }
 
-    .heroList__link {
-        display: block;
-        width: 100%;
-        height: 100%;
-        transition-timing-function: ease-out;
-        transition-duration: 0.2s;
-        z-index: 0;
-        margin-bottom: 20px;
-        box-shadow: 1px 1px 4px #000;
-        filter: saturate(0.8);
-        background-position: center;
-        background-size: 110%;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        cursor: pointer;
-
-        &:hover {
-            filter: saturate(1);
-        }
-    }
-
-    &:hover .heroInfo {
+    &:hover .HeroInfo {
         opacity: 1;
         height: auto;
         transition-delay: 0s;
@@ -44,72 +23,93 @@
         animation-duration: 0.2s;
         transition: ease-in-out;
     }
+}
 
-    .heroInfo {
-        position: absolute;
-        bottom: 0;
-        opacity: 0;
-        display: flex;
-        width: 100%;
-        align-items: center;
-        animation-name: hide-hero-name;
-        animation-duration: 0.2s;
-        transition: ease-in-out;
-        will-change: transform;
-        z-index: 0;
+.HeroLink {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    z-index: 0;
+    margin-bottom: 1.25rem;
+    box-shadow: 0.0625rem 0.0625rem 0.25rem #000;
+    filter: saturate(0.8);
+    background-position: center;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    cursor: pointer;
 
-        .attrIconContainer {
-            height: 42px;
-            width: 42px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .heroAttrImg {
-            width: 30px;
-            height: 30px;
-            transform: scale(1);
-        }
-
-        .heroName {
-            font-size: 18px;
-            line-height: 20px;
-            font-family: "Reaver-Bold", serif;
-            font-weight: 600;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 8px;
-            padding-left: 0px;
-            text-shadow: 0px 0px 4px #000;
-            white-space: normal;
-            width: 167px;
-        }
+    &:hover {
+        filter: saturate(1);
     }
+}
+
+.HeroInfo {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    animation-name: hide-hero-name;
+    animation-duration: 0.2s;
+    transition: ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.AttrIconContainer {
+    height: 2.625rem;
+    width: 2.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HeroAttrImg {
+    width: 1.875rem;
+    height: 1.875rem;
+    transform: scale(1);
+}
+
+.HeroName {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    font-family: "Reaver-Bold", serif;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    padding: 0.5rem;
+    padding-left: 0rem;
+    text-shadow: 0rem 0rem 0.25rem #000;
+    white-space: normal;
+    width: 10.4375rem;
 }
 
 @keyframes show-hero-name {
     0% {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(2.5rem);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0rem);
     }
 }
 
 @keyframes hide-hero-name {
     0% {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0rem);
     }
 
     100% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(1.875rem);
         z-index: -1;
     }
 }

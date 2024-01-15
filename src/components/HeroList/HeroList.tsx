@@ -8,11 +8,12 @@ export function HeroList({ heroes }: HeroListProps) {
     <TransitionGroup className={styles.HeroList}>
       {heroes.map((hero) => (
         <CSSTransition key={hero.name} timeout={350} classNames={{
-          enter: styles.heroItemEnter,
-          enterActive: styles.heroItemEnterActive,
-          exit: styles.heroItemExit,
-          exitActive: styles.heroItemExitActive,
-          exitDone: styles.heroItemExitDone,
+          enter: styles.HeroItemEnter,
+          enterDone: styles.HeroItemEnterDone,
+          enterActive: styles.HeroItemEnterActive,
+          exit: styles.HeroItemExit,
+          exitActive: styles.HeroItemExitActive,
+          exitDone: styles.HeroItemExitDone,
         }}>
             <Hero hero={hero}/>
         </CSSTransition>

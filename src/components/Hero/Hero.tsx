@@ -6,9 +6,9 @@ import styles from "./Hero.module.scss";
 export function Hero({ hero }: { hero: HeroProps }) {
 
     return (
-        <div className={styles.heroItemContainer} key={hero.name}>
+        <div className={styles.HeroItemContainer} key={hero.name}>
             <a
-                className={styles.heroList__link}
+                className={styles.HeroLink}
                 href="#"
                 key={hero.name}
                 style={{
@@ -22,11 +22,11 @@ export function Hero({ hero }: { hero: HeroProps }) {
                     backgroundSize: "cover",
                 }}
             ></a>
-            <div className={styles.heroInfo}>
+            <div className={styles.HeroInfo}>
                 {hero.primary_attr !== undefined && (
-                    <div className={styles.attrIconContainer}>
+                    <div className={styles.AttrIconContainer}>
                         <Image
-                            className={styles.heroAttrImg}
+                            className={styles.HeroAttrImg}
                             src={heroAttrs[hero.primary_attr]}
                             alt="hero-attr"
                             width={45}
@@ -34,7 +34,7 @@ export function Hero({ hero }: { hero: HeroProps }) {
                         />
                     </div>
                 )}
-                <p className={styles.heroName}>{hero.name_loc}</p>
+                <p className={styles.HeroName}>{hero.name_loc}</p>
             </div>
         </div>
     )

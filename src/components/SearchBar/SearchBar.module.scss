@@ -1,72 +1,72 @@
 .SearchBar {
     width: 100%;
-    max-width: 1200px;
+    max-width: 75rem;
     height: 100%;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 0.625rem;
+    margin-top: 1.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid rgba(17, 17, 17, .5647058824);
-    border-radius: 5px;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, .3137254902);
+    border: 0.0625rem solid rgba(17, 17, 17, .5647058824);
+    border-radius: 0.3125rem;
+    box-shadow: 0rem 0rem 1.875rem rgba(0, 0, 0, .3137254902);
     background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
     position: relative;
     margin: 0 auto;
-    margin-bottom: 15px;
-    margin-top: 20px;
+    margin-bottom: 0.9375rem;
+    margin-top: 1.25rem;
 }
 
-.searchBar__title {
-    margin: 0 10px;
-    width: 180px;
-    font-size: 18px;
+.SearchBarTitle {
+    margin: 0 0.625rem;
+    width: 11.25rem;
+    font-size: 1.125rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     font-family: "Radiance", sans-serif;
     font-weight: 200;
 }
 
-.attrFilterContainer,
-.complFilterContainer {
+.AttrFilterContainer,
+.ComplFilterContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 20px;
+    margin-left: 1.25rem;
 }
 
-.filterTitle {
+.FilterTitle {
     color: #808fa6;
-    font-size: 17px;
+    font-size: 1.0625rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: 20px;
+    letter-spacing: 0.125rem;
+    margin-right: 1.25rem;
     font-family: "Radiance", sans-serif;
     font-weight: 200;
 }
 
-.heroSearchContainer {
-    width: 250px;
-    height: 50px;
+.HeroSearchContainer {
+    width: 15.625rem;
+    height: 3.125rem;
     background-color: #25282a;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
     justify-self: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
-.heroSearchInput {
-    height: 30px;
-    max-width: 194px;
-    border: 0px solid rgba(0, 0, 0, 0);
+.HeroSearchInput {
+    height: 1.875rem;
+    max-width: 12.125rem;
+    border: 0rem solid rgba(0, 0, 0, 0);
     background-color: #25282a;
     outline: none;
     color: #fff;
-    font-size: 18px;
-    padding: 4px;
+    font-size: 1.125rem;
+    padding: 0.25rem;
     font-family: "Radiance", "Noto Sans", sans-serif;
 
     &:focus {
