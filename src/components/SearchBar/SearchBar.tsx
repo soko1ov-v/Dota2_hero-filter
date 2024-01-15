@@ -1,7 +1,8 @@
 import { SearchBarProps } from "@/utils/interfaces";
-import { Button } from "./Button";
-import { Input } from "./Input";
-import { SearchIcon } from "./icons/SearchIcon";
+import { Button } from "../Button";
+import { Input } from "../Input";
+import { SearchIcon } from "../icons/SearchIcon";
+import styles from "./SearchBar.module.scss";
 
 const attributes: { [key: string]:  { image: string; text: string; value: number } } = {
   0: {
@@ -53,15 +54,15 @@ export function SearchBar({
   onComplClick,
 }: SearchBarProps) {
   return (
-    <div className="search-bar">
-      <h3 className="search-bar__title">FILTER HEROES</h3>
-      <div className="attr-filter-container">
-        <h3 className="filter-title">ATTRIBUTE</h3>
+    <div className={styles.SearchBar}>
+      <h3 className={styles.SearchBar__title}>FILTER HEROES</h3>
+      <div className={styles.attrFilterContainer}>
+        <h3 className={styles.filterTitle}>ATTRIBUTE</h3>
         {Object.keys(attributes).map((attr) => {
           return (
             <Button
               key={attr}
-              className={`attr-btn btn ${
+              className={`attrBtn btn ${
                 attrActive === attributes[attr].value ? "btn--active" : ""
               }`}
               text={attributes[attr].text}
@@ -72,13 +73,13 @@ export function SearchBar({
         })}
       </div>
 
-      <div className="compl-filter-container">
-        <h3 className="filter-title">COMPLEXITY</h3>
+      <div className={styles.complFilterContainer}>
+        <h3 className={styles.filterTitle}>COMPLEXITY</h3>
         {Object.keys(complexityMap).map((comp) => {
           return (
             <Button
               key={comp}
-              className={`compl-btn btn ${
+              className={`complBtn btn ${
                 complexity >= complexityMap[comp].value ? "btn--active" : ""
               }`}
               onClick={() => onComplClick(complexityMap[comp].value)}
@@ -90,12 +91,12 @@ export function SearchBar({
         })}
       </div>
 
-      <div className="hero-search-container">
+      <div className={styles.heroSearchContainer}>
         <SearchIcon />
         <form>
           <Input
             onChange={onChange}
-            className="hero-search-input"
+            className={styles.heroSearchInput}
             value={query}
           />
         </form>

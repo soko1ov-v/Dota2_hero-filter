@@ -1,0 +1,115 @@
+.heroItemContainer {
+    justify-self: start;
+    width: 225px;
+    height: 127px;
+    position: relative;
+    box-shadow: 1px 1px 4px #000;
+    transform-origin: center;
+    transform: scale(1);
+    transition: transform 0.35s ease-in-out, width 0.35s ease-in-out;
+    will-change: transform;
+    overflow: hidden;
+
+    &:hover {
+        transform: scale(1.4);
+        z-index: 1;
+    }
+
+    .heroList__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+        z-index: 0;
+        margin-bottom: 20px;
+        box-shadow: 1px 1px 4px #000;
+        filter: saturate(0.8);
+        background-position: center;
+        background-size: 110%;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover {
+            filter: saturate(1);
+        }
+    }
+
+    &:hover .heroInfo {
+        opacity: 1;
+        height: auto;
+        transition-delay: 0s;
+        animation-name: show-hero-name;
+        animation-duration: 0.2s;
+        transition: ease-in-out;
+    }
+
+    .heroInfo {
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        animation-name: hide-hero-name;
+        animation-duration: 0.2s;
+        transition: ease-in-out;
+        will-change: transform;
+        z-index: 0;
+
+        .attrIconContainer {
+            height: 42px;
+            width: 42px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heroAttrImg {
+            width: 30px;
+            height: 30px;
+            transform: scale(1);
+        }
+
+        .heroName {
+            font-size: 18px;
+            line-height: 20px;
+            font-family: "Reaver-Bold", serif;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px;
+            padding-left: 0px;
+            text-shadow: 0px 0px 4px #000;
+            white-space: normal;
+            width: 167px;
+        }
+    }
+}
+
+@keyframes show-hero-name {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes hide-hero-name {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(30px);
+        z-index: -1;
+    }
+}

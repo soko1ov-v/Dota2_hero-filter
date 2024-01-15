@@ -1,0 +1,75 @@
+.SearchBar {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(17, 17, 17, .5647058824);
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, .3137254902);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.searchBar__title {
+    margin: 0 10px;
+    width: 180px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Radiance", sans-serif;
+    font-weight: 200;
+}
+
+.attrFilterContainer,
+.complFilterContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.filterTitle {
+    color: #808fa6;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 20px;
+    font-family: "Radiance", sans-serif;
+    font-weight: 200;
+}
+
+.heroSearchContainer {
+    width: 250px;
+    height: 50px;
+    background-color: #25282a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-self: center;
+    gap: 10px;
+}
+
+.heroSearchInput {
+    height: 30px;
+    max-width: 194px;
+    border: 0px solid rgba(0, 0, 0, 0);
+    background-color: #25282a;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 4px;
+    font-family: "Radiance", "Noto Sans", sans-serif;
+
+    &:focus {
+        background-color: #505050;
+    }
+}

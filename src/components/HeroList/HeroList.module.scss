@@ -1,0 +1,54 @@
+.HeroList {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 18px;
+    row-gap: 14px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    animation-name: list-animation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    transition: height 1s ease-in-out, transform 1s ease-in-out;
+    will-change: transform;
+}
+
+.heroItemEnter {
+    transform: scale(0);
+    width: 0;
+}
+
+.heroItemEnterDone,
+.heroItemEnterActive {
+    transform: scale(1);
+    width: 225px;
+}
+
+.heroItemExit {
+    transform: scale(1);
+    width: 225px;
+}
+
+.heroItemExitActive {
+    transform: scale(0);
+    width: 0;
+}
+
+.heroItemExitDone {
+    transform: scale(0);
+}
+
+@keyframes list-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

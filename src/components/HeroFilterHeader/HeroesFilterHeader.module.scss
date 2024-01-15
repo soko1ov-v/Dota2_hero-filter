@@ -1,0 +1,31 @@
+.FilterHeader {
+    display: grid;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 0 100px;
+}
+
+.FilterHeader__title {
+    color: #fff;
+    font-size: 3vw;
+    font-family: "Reaver-Bold", serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 112%;
+}
+
+.FilterHeader__info {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+    color: #ddd;
+    font-family: "Radiance", serif;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
